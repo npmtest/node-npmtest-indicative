@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-indicative/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-indicative/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-indicative/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-indicative/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-indicative/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-indicative/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-indicative/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-indicative/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-indicative/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-indicative/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-indicative/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-indicative/build/coverage.html/index.html)
 
@@ -35,17 +35,25 @@
 ```json
 
 {
-    "name": "indicative",
-    "version": "2.2.1",
-    "description": "Intentionally beautiful schema and raw validator for nodejs",
-    "main": "index.js",
-    "scripts": {
-        "test": "npm run lint && istanbul cover _mocha --report lcovonly -- -R spec test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-        "coverage": "npm run lint && istanbul cover _mocha test --bail",
-        "lint": "standard"
+    "author": {
+        "name": "amanvirk"
     },
-    "author": "amanvirk",
-    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/poppinss/indicative/issues"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "dependencies": {
+        "inflect": "^0.3.0",
+        "lodash": "^4.12.0",
+        "moment": "^2.13.0",
+        "pope": "^1.0.0",
+        "q": "^2.0.3"
+    },
+    "description": "Intentionally beautiful schema and raw validator for nodejs",
     "devDependencies": {
         "benchmark": "^2.1.0",
         "chai": "^3.5.0",
@@ -57,12 +65,42 @@
         "mocha-lcov-reporter": "^1.2.0",
         "standard": "^8.4.0"
     },
-    "dependencies": {
-        "inflect": "^0.3.0",
-        "lodash": "^4.12.0",
-        "moment": "^2.13.0",
-        "pope": "^1.0.0",
-        "q": "^2.0.3"
+    "directories": {
+        "doc": "docs",
+        "test": "test"
+    },
+    "dist": {
+        "shasum": "2d007aef269c0ca6bf136c5577f0ace4361fb4de",
+        "tarball": "https://registry.npmjs.org/indicative/-/indicative-2.2.1.tgz"
+    },
+    "gitHead": "ac6af436864163c428b717072f6190c46220f9f0",
+    "homepage": "https://github.com/poppinss/indicative#readme",
+    "keywords": [
+        "node-validator",
+        "validator",
+        "schema-validator",
+        "quick-validations"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "maintainers": [
+        {
+            "name": "adonisjs"
+        },
+        {
+            "name": "amanvirk"
+        }
+    ],
+    "name": "indicative",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/poppinss/indicative.git"
+    },
+    "scripts": {
+        "coverage": "npm run lint && istanbul cover _mocha test --bail",
+        "lint": "standard",
+        "test": "npm run lint && istanbul cover _mocha --report lcovonly -- -R spec test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
     },
     "standard": {
         "global": [
@@ -75,29 +113,8 @@
             "afterEach"
         ]
     },
-    "directories": {
-        "doc": "docs",
-        "test": "test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/poppinss/indicative.git"
-    },
-    "keywords": [
-        "node-validator",
-        "validator",
-        "schema-validator",
-        "quick-validations"
-    ],
-    "bugs": {
-        "url": "https://github.com/poppinss/indicative/issues"
-    },
-    "homepage": "https://github.com/poppinss/indicative#readme",
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    }
+    "version": "2.2.1",
+    "bin": {}
 }
 ```
 
